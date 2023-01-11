@@ -1,10 +1,7 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Home from "../src/screens/Home"
-// @ts-ignore
-const Sidebar = dynamic(() => import("components/sidebar"), {
-  suspense: true,
-});
+
 
 export default function HomeScreen() {
   return (
