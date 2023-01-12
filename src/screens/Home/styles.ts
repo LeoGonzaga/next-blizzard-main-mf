@@ -7,6 +7,7 @@ const Container = styled.div<{ bgCover: number }>`
   height: 736px;
   background-size: cover;
   animation: ${FadeInAnimation} 0.6s ease-in;
+  transition: "animation 0.2s ease-out";
   display: flex;
   justify-content: center;
 `;

@@ -30,6 +30,11 @@ const Wrapper = styled.div`
 
 const GrayScale = styled.div<{ isSelected: boolean }>`
   filter: ${(props) => (props.isSelected ? "initial" : "grayscale(100%)")};
+  transition: 0.2s ease all;
+
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 const Text = styled.div`
