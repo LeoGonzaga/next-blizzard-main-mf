@@ -91,7 +91,7 @@ const Trailler = styled.div`
     cursor: pointer;
     background-color: transparent;
     border: none;
-    transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease;
 
     &:hover {
       filter: brightness(0.75);
@@ -104,7 +104,7 @@ const Video = styled.div<{ thumb: string; video: string }>`
   border-radius: 4px;
   width: 280px;
   height: 150px;
-  transition: 0.3s all ease-in;
+  transition: 0.3s all ease;
   background-image: url(${(props) => props.thumb});
   &:hover {
     background-size: cover;
