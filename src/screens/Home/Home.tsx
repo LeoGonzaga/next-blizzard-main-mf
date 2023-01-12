@@ -18,7 +18,7 @@ export const Home = (): JSX.Element => {
       <Styles.Wrapper>
         <Navbar />
         <Banner />
-        <Card />
+        {/* <Card /> */}
       </Styles.Wrapper>
     </Styles.Container>
   );
