@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FadeInAnimation } from "../../utils/animations";
 
 const Container = styled.div`
-  padding: 111px 98px 0px 98px;
+  padding: 3% 98px 0px 98px;
 
   display: flex;
   animation: ${FadeInAnimation} 0.6s ease-in;
@@ -45,7 +45,7 @@ const Text = styled.div`
     font-weight: 700;
     font-size: 64px;
     line-height: 110.2%;
-    width: 662px;
+    width: 602px;
   }
 
   p {
@@ -65,7 +65,7 @@ const Text = styled.div`
 
 const Blur = styled.div`
   position: absolute;
-  bottom: -15px;
+  bottom: 30px;
   z-index: 0px;
   width: 270px;
   height: 158px;
@@ -112,6 +112,17 @@ const Video = styled.div<{ thumb: string; video: string }>`
   }
 `;
 
+const Line = styled.div<{ value: number }>`
+  width: ${(props) => props.value + "%"};
+  height: 3px;
+  background-color: #00aeff;
+
+  position: absolute;
+  left: 0px;
+  margin-top: 30px;
+  transition: 0.2s all ease;
+`;
+
 export const Styles = {
   Container,
   Wrapper,
@@ -121,4 +132,5 @@ export const Styles = {
   Video,
   Blur,
   GrayScale,
+  Line,
 };

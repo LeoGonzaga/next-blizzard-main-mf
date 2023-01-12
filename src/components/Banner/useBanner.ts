@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGame } from "../../store";
 import DiabloLogo from "../../../assets/diablo-logo.png";
 import HearthLogo from "../../../assets/heart-logo.png";
@@ -78,11 +78,22 @@ const useBanner = () => {
   const game = useGame((state: any) => state.game);
   const changegame = useGame((state: any) => state.changeGame);
 
+  const [timer, setTimer] = useState(0);
+
   const handleSelectGame = (value: number) => {
     changegame(PAYLOAD[value]);
   };
 
-  return { handleSelectGame, game };
+  // useEffect(() => {
+  //   const value = setInterval(() => {
+  //     setTimer((timer) => timer + 1);
+  //     if (timer === 100) setTimer(0);
+  //   }, 100);
+
+  //   return () => clearInterval(value);
+  // }, [timer]);
+
+  return { handleSelectGame, game, timer };
 };
 
 export default useBanner;

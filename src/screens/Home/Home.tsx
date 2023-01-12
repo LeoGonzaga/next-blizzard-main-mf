@@ -7,8 +7,9 @@ import { Styles } from "./styles";
 
 export const Home = (): JSX.Element => {
   // @ts-ignore
-  const Sidebar = dynamic(() => import("components/sidebar"), {
+  const Card = dynamic(() => import("components/card"), {
     loading: () => <p>Loading caused by client page transition ...</p>,
+    ssr: false,
   });
 
   const game = useGame((state: any) => state.game);
@@ -17,6 +18,7 @@ export const Home = (): JSX.Element => {
       <Styles.Wrapper>
         <Navbar />
         <Banner />
+        <Card />
       </Styles.Wrapper>
     </Styles.Container>
   );

@@ -6,11 +6,13 @@ const nextConfig = {
     const { isServer } = options;
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'main',
+        name: "main",
         remotes: {
-          components: `components@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
+          components: `components@http://localhost:3001/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
         },
-        filename: 'static/chunks/remoteEntry.js',
+        filename: "static/chunks/remoteEntry.js",
       })
     );
 
