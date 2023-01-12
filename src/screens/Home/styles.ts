@@ -1,6 +1,7 @@
 import styled from "styled-components";
-const Container = styled.div`
-  background-image: url("background1.png");
+
+const Container = styled.div<{ bgCover: number }>`
+  background-image: ${(props) => `url(background-${props.bgCover}.png)`};
   height: 736px;
   background-size: cover;
 

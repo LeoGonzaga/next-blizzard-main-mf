@@ -7,55 +7,41 @@ import Wow from "../../../assets/wow.png";
 import HearthStone from "../../../assets/heartstone.png";
 import Dgame from "../../../assets/dgame.png";
 import SC from "../../../assets/sc.png";
-import DiabloLogo from "../../../assets/diablo-logo.png";
 
-import { Styles } from "./styles";
 import DefaultButton from "../Buttons/DefaultButton";
-const GAMES = [
-  {
-    image: Diablo,
-    title: "Retorna à escuridão com o game Diablo IV",
-  },
-  {
-    image: Wow,
-    title: "Retorna à escuridão com o game Diablo IV",
-  },
-  {
-    image: HearthStone,
-    title: "Retorna à escuridão com o game Diablo IV",
-  },
-  {
-    image: Dgame,
-    title: "Retorna à escuridão com o game Diablo IV",
-  },
-  {
-    image: SC,
-    title: "Retorna à escuridão com o game Diablo IV",
-  },
-];
+import useBanner from "./useBanner";
+import { Styles } from "./styles";
+const GAMES = [Diablo, Wow, HearthStone, Dgame, SC];
 
 export const Banner = (): JSX.Element => {
+  const { handleSelectGame, game } = useBanner();
   return (
     <Styles.Container>
       <Styles.Wrapper>
-        {GAMES.map((game) => (
-          <Image src={game.image} alt={game.title} key={game.title} />
+        {GAMES.map((value, index) => (
+          <Styles.GrayScale key={index} isSelected={index === game.index}>
+            <Image
+              src={value}
+              alt="Icones"
+              onClick={() => handleSelectGame(index)}
+            />
+          </Styles.GrayScale>
         ))}
       </Styles.Wrapper>
 
       <Styles.Content>
         <Styles.Text>
-          <h1>Retorne à escuridão com o game Diablo IV</h1>
-          <p>O retorno de Lilith traz uma era de escuridão e sofrimento</p>
-          <DefaultButton name="Jogue agora" hide />
+          <h1>{game.title}</h1>
+          <p>{game.subtitle}</p>
+          <DefaultButton name={game.button} />
         </Styles.Text>
 
         <Styles.Trailler>
-          <Image src={DiabloLogo} alt="Diablo" />
+          <Image src={game.logo} alt="Diablo" width={291} height={160} />
           <button>ASSISTA O TRAILER</button>
           <Styles.Blur />
 
-          <Styles.Video />
+          <Styles.Video thumb={game.thumb} video={game.trailler} />
         </Styles.Trailler>
       </Styles.Content>
     </Styles.Container>

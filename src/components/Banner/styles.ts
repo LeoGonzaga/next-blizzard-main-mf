@@ -22,25 +22,23 @@ const Wrapper = styled.div`
   img {
     margin-bottom: 20px;
     cursor: pointer;
-    filter: grayscale(100%);
     transition: 0.2s all ease-in-out;
-
-    &:hover {
-      filter: grayscale(0%);
-    }
   }
 `;
 
+const GrayScale = styled.div<{ isSelected: boolean }>`
+  filter: ${(props) => (props.isSelected ? "initial" : "grayscale(100%)")};
+`;
+
 const Text = styled.div`
-  display: flex;
-  flex-direction: column;
   color: #fff;
   margin-top: 34px;
+
   h1 {
     font-weight: 700;
     font-size: 64px;
     line-height: 110.2%;
-    width: 562px;
+    width: 662px;
   }
 
   p {
@@ -54,7 +52,7 @@ const Text = styled.div`
   button {
     margin-top: 32px;
     height: 52px;
-    width: 158px;
+    max-width: 331px;
   }
 `;
 
@@ -74,6 +72,7 @@ const Trailler = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  background-size: contain;
   button {
     color: #fff;
     text-align: right;
@@ -85,19 +84,24 @@ const Trailler = styled.div`
     cursor: pointer;
     background-color: transparent;
     border: none;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      filter: brightness(0.75);
+    }
   }
 `;
 
-const Video = styled.div`
+const Video = styled.div<{ thumb: string; video: string }>`
   z-index: 1;
   border-radius: 4px;
   width: 280px;
   height: 150px;
   transition: 0.3s all ease-in;
-  background-image: url("https://blizzard-qpx5s16fs-joaotuliojt.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiablo-animation-cover.1fc3b485.png&w=384&q=75");
+  background-image: url(${(props) => props.thumb});
   &:hover {
     background-size: cover;
-    background-image: url("https://blizzard-qpx5s16fs-joaotuliojt.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiablo-animation.96278818.gif&w=640&q=75");
+    background-image: url(${(props) => props.video});
   }
 `;
 
@@ -109,4 +113,5 @@ export const Styles = {
   Content,
   Video,
   Blur,
+  GrayScale,
 };
