@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { FadeInAnimation } from "../../utils/animations";
 
 const Container = styled.div`
   padding: 111px 98px 0px 98px;
 
   display: flex;
+  animation: ${FadeInAnimation} 0.6s ease-in;
 `;
 
 const Content = styled.div`
@@ -79,7 +81,7 @@ const Trailler = styled.div`
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
-    margin-top: 92px;
+    margin-top: 52px;
     margin-bottom: 8px;
     cursor: pointer;
     background-color: transparent;
