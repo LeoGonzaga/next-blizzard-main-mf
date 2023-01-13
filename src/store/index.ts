@@ -3,8 +3,6 @@ import DiabloLogo from "../../assets/diablo-logo.png";
 
 export const useGame = create((set) => ({
   game: {
-    background:
-      "https://github.com/joaotuliojt/blizzard/blob/main/src/assets/banners_hero/hearthstone-bg.png",
     title: "Retorne à escuridão com o game Diablo IV",
     subtitle: "O retorno de Lilith traz uma era de escuridão e sofrimento",
     logo: DiabloLogo,

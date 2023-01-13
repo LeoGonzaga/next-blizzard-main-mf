@@ -13,12 +13,16 @@ export const Home = (): JSX.Element => {
   });
 
   const game = useGame((state: any) => state.game);
+
   return (
     <Styles.Container bgCover={game.index}>
       <Styles.Wrapper>
         <Navbar />
         <Banner />
-        {/* <Card /> */}
+        <React.Suspense fallback="loading button...">
+          {/* @ts-ignore */}
+          <Card />
+        </React.Suspense>
       </Styles.Wrapper>
     </Styles.Container>
   );
