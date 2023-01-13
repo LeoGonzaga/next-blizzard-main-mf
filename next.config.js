@@ -7,11 +7,7 @@ const nextConfig = {
     config.plugins.push(
       new NextFederationPlugin({
         name: "main",
-        remotes: {
-          components: `components@http://localhost:3001/_next/static/${
-            isServer ? "ssr" : "chunks"
-          }/remoteEntry.js`,
-        },
+        remotes: getRemotes(isServer),
         filename: "static/chunks/remoteEntry.js",
       })
     );
@@ -19,5 +15,17 @@ const nextConfig = {
     return config;
   },
 };
+
+function getRemotes(isServer) {
+  const location = isServer ? "ssr" : "chunks";
+  const url = process.env.DEVELOPMENT
+    ? "http://localhost:3001"
+    : "https://blizzard-components-mf.vercel.app";
+
+  console.log("aaaaaaaaaa", url);
+  return {
+    components: `components@${url}/_next/static/${location}/remoteEntry.js`,
+  };
+}
 
 module.exports = nextConfig;
