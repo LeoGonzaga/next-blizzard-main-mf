@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import Banner from "../../components/Banner";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { useGame } from "../../store";
 import { Styles } from "./styles";
@@ -23,6 +24,7 @@ export const Home = (): JSX.Element => {
           {/* @ts-ignore */}
           <Card />
         </React.Suspense>
+        <Footer />
       </Styles.Wrapper>
     </Styles.Container>
   );
