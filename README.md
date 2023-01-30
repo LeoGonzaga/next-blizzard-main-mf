@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<h2>Blizzard Redesign - BR Chanllanges</h2>
+</div>   
+<p align="center">	
+   <a href="https://www.linkedin.com/in/leogonzaga/">
+      <img alt="Léo Gonzaga" src="https://img.shields.io/badge/-Leo Gonzaga-00aeff?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoGonzaga/next-blizzard-main-mf?color=00aeff">
 
-## Getting Started
+  <a href="https://github.com/leoGonzaga/preguizap/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leoGonzaga/next-blizzard-main-mf?color=00aeff">
+  </a> 
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-00aeff">
 
-First, run the development server:
+</p>
+
+> :rocket: Redesing da plataforma da Blizzard. Layout foi criado pelo Gilberto Prado
+
+<div align="center">
+   <p>Acessar: https://blizzard-redesign.vercel.app/</p>  
+</div>
+
+<img src="https://github.com/LeoGonzaga/next-blizzard-main-mf/blob/main/screenshot.png" />
+
+# :pushpin: Conteúdo
+
+- [Tecnologias](#computer-Tecnologias)
+- [Como executar](#construction_worker-how-to-run)
+- [Licença](#closed_book-license)
+
+# :computer: Tecnologias
+
+Esse projeto foi desenvolvido utlizando:
+
+- Next JS
+- Module Federation
+- Styled-Components
+- TypeScript
+- Zustand
+
+# :construction_worker: How to run
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone repositório
+$ git clone git@github.com:LeoGonzaga/next-blizzard-main-mf.git
+
+# Acesse a pasta
+# Utilize yarn ou npm para instalar os pacotes
+# Para iniciar a aplicação
+$ yarn dev
+# Clique no link gerado pelo terminal
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# :closed_book: License
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Released in 2023 :closed_book: License
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with love by [Léo Gonzaga](https://github.com/LeoGonzaga) 🚀.
+This project is under the [MIT license](./LICENSE).
