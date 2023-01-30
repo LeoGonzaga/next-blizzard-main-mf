@@ -6,6 +6,7 @@ const Container = styled.div`
 
   display: flex;
   animation: ${FadeInAnimation} 0.6s ease-in;
+  margin-bottom: 100px;
 `;
 
 const Content = styled.div`

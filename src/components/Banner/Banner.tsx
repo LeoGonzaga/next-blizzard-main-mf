@@ -5,13 +5,11 @@ import Image from "next/image";
 import Diablo from "../../../assets/diablo.png";
 import Wow from "../../../assets/wow.png";
 import HearthStone from "../../../assets/heartstone.png";
-import Dgame from "../../../assets/dgame.png";
-import SC from "../../../assets/sc.png";
 
 import DefaultButton from "../Buttons/DefaultButton";
 import useBanner from "./useBanner";
 import { Styles } from "./styles";
-const GAMES = [Diablo, Wow, HearthStone, Dgame, SC];
+const GAMES = [Diablo, HearthStone, Wow];
 
 export const Banner = (): JSX.Element => {
   const { handleSelectGame, game, timer } = useBanner();

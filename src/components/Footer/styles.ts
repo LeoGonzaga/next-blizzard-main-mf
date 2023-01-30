@@ -13,9 +13,34 @@ const Container = styled.div`
 
 const Infos = styled.div`
   width: 30%;
+  margin-top: 100px;
+  padding-left: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  color: #fff;
+
+  div {
+    display: flex;
+    margin: 10px 0px;
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: #828792;
+    font-family: "Poppins";
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 230px;
+    margin: 20px 0px;
+  }
 `;
 
 const Images = styled.div`
@@ -32,7 +57,7 @@ const FloatImage = styled.div`
   z-index: 1;
   position: relative;
   left: 30%;
-  animation: ${UpDownAnimation} 2s infinite alternate-reverse ease-in-out;
+  animation: ${UpDownAnimation} 3s infinite alternate-reverse ease-in-out;
 `;
 
 export const Styles = {
