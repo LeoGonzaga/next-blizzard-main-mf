@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { UpDownAnimation } from "../../utils/animations";
+import { ParticlesAnimation, UpDownAnimation } from "../../utils/animations";
 
 const Container = styled.div`
   background-image: url("bg.png");
-  width: 100vw;
   height: 100%;
-
+  background-size: cover;
   display: flex;
   margin-top: -10px;
   z-index: -1;
+
+  margin-left: 100px;
 `;
 
 const Infos = styled.div`
@@ -60,10 +61,19 @@ const FloatImage = styled.div`
   animation: ${UpDownAnimation} 3s infinite alternate-reverse ease-in-out;
 `;
 
+const Particles = styled.div`
+  width: 3px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  opacity: 0.5;
+`;
+
 export const Styles = {
   Container,
   Infos,
   Images,
   FixedImage,
   FloatImage,
+  Particles,
 };

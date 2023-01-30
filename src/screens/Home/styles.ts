@@ -14,7 +14,6 @@ const Container = styled.div<{ bgCover: number }>`
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 1700px;
 `;
 
 export const Styles = {
